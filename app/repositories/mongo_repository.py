@@ -8,7 +8,7 @@ class MongoRepository:
         self.db = self.client[db_name]
 
     async def initialize_collections(self):
-        # Conversaciones
+        # Indices compuestos
         await self.db.conversaciones_logs.create_index(
             [("id_clinica", ASCENDING), ("fecha_hora", ASCENDING), ("canal", ASCENDING)]
         )
