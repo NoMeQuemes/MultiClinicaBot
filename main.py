@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from app.routers.router import router
 
 app = FastAPI(
     title="Chatbot AI",
@@ -6,7 +7,4 @@ app = FastAPI(
     version="0.1.0"
 )
 
-@app.get("/health", tags=["Monitoring"])
-def health_check():
-    """Endpoint para verificar que la aplicación está funcionando."""
-    return {"status": "ok"}
+app.include_router(router)
