@@ -1,10 +1,5 @@
 from fastapi import FastAPI
 
-
-
-
-
-
 app = FastAPI(
     title="Chatbot AI",
     description="Un bot conversacional multi-institucional con FastAPI y LangGraph.",
